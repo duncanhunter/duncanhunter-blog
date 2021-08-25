@@ -1,6 +1,5 @@
-# Vanilla JavaScript App
+## astro react tailwind blog with tags on hosted on Azure Static Web Apps
 
-
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build JavaScript apps in minutes. Use this repo with the [quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=vanilla-javascript) to build and customize a new static site.
-
-This repo is used as a starter for a _very basic_ HTML web application using no front-end frameworks.
+1. mkdir my-blog && cd my-blog
+2. 
+3. 
