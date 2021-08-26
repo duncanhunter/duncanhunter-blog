@@ -3,6 +3,7 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import PostPreview from '../components/PostPreview.astro';
 import Pagination from '../components/Pagination.astro';
+import Maintenance from '../components/Maintenance.astro';
 import authorData from '../data/authors.json';
 
 let title = 'Duncan Hunter’s Blog';
@@ -11,6 +12,7 @@ let description = 'A blog about my work';
 let allPosts = Astro.fetchContent('./post/*.md');
 allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 let firstPage = allPosts.slice(0, 2);
+let maintenanceMode = true
 
 ---
 <html lang="en">
@@ -24,11 +26,9 @@ let firstPage = allPosts.slice(0, 2);
       canonicalURL={Astro.request.canonicalURL.href}
     />
   </head>
-
+  <Nav />
   <body>
-    <Nav />
-
-    <main>
+     <main>
       <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
         <div class="absolute inset-0">
           <div class="bg-white h-1/3 sm:h-2/3"></div>
