@@ -13,7 +13,7 @@ const { content } = Astro.props;
 
   <body class="bg-gray-900">
     <Nav />
-    <div class="relative py-16 overflow-hidden">
+    <div class="relative py-8 overflow-hidden">
       <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
           <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
@@ -49,12 +49,13 @@ const { content } = Astro.props;
           </h1>
           <p class="mt-8 text-xl text-gray-300 leading-8">{content.description}</p>
         </div>
-        <div class="mt-6 prose prose-indigo prose-lg text-gray-300 mx-auto">
+        <div class="mt-6 prose prose-lg  mx-auto">
           <figure>
             <img class="w-full rounded-lg" src={content.image} alt="" width="1310" height="873">
-            <figcaption>{content.imageDescription}</figcaption>
           </figure>
+        <div class="mt-6 text-gray-300 mx-auto">
               <slot />
+        </div>
         </div>
       </div>
     </div>
