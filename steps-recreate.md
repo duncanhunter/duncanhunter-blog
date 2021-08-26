@@ -87,3 +87,5 @@ module.exports = {
   plugins: [require("@tailwindcss/typography")],
 };
 ```
+
+11. make favicon

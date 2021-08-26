@@ -6,16 +6,7 @@ export interface Props {
 
 const { prevUrl, nextUrl } = Astro.props;
 ---
-
 <style lang="scss">
-.nav {
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .prev,
 .next {
   display: block;
@@ -26,19 +17,17 @@ const { prevUrl, nextUrl } = Astro.props;
     display: none;
   }
 }
-
-.prev {
-  margin-right: auto;
-}
-
-.next {
-  margin-left: auto;
-}
 </style>
 
-<div class="wrapper">
+<div>
   <nav class="nav">
-    <a class="prev" href={prevUrl || '#'} aria-label="Previous Page">Prev</a>
-    <a class="next" href={nextUrl || '#'} aria-label="Next Page">Next</a>
+      <div class="flex-1 flex justify-between sm:justify-end">
+    <a href={prevUrl || '#'} aria-label="Previous Page" class="prev relative inline-flex items-center px-4 py-2 border border-gray-800 text-sm font-medium rounded-md text-gray-300 bg-gray-800 hover:bg-gray-700">
+      Previous
+    </a>
+    <a href={nextUrl || '#'} aria-label="Next Page" class="next ml-3 relative inline-flex items-center px-4 py-2 border border-gray-800 text-sm font-medium rounded-md text-gray-300 bg-gray-800 hover:bg-gray-700">
+      Next
+    </a>
+  </div>
   </nav>
 </div>
