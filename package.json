@@ -8,6 +8,13 @@
     "build": "astro build"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "astro": "^0.19.4"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.7"
+  },
+  "snowpack": {
+    "workspaceRoot": "../.."
   }
 }
