@@ -40,7 +40,7 @@ let showPagination = allPosts.length > 9
             </p>
           </div>
           <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-            {[allPosts[0]].map((post) => <PostPreview post={post} />)}
+            {allPosts.map((post) => <PostPreview post={post} />)}
           </div>
           <div class="flex justify-end pt-4">
             {showPagination ? <Pagination nextUrl="/posts/2" /> : null}

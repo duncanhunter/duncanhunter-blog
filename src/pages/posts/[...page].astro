@@ -12,8 +12,8 @@ export async function getStaticPaths({paginate, rss}) {
   const allPosts = Astro.fetchContent('../post/*.md');
   const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
   rss({
-    title: 'Don’s Blog',
-    description: 'An example blog on Astro',
+    title: 'Duncan’s Blog',
+    description: 'A blog about my work',
     customData: `<language>en-us</language>`,
     items: sortedPosts.map(item => ({
       title: item.title,
